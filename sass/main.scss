@@ -1,3 +1,4 @@
+@import "../node_modules/bootstrap/scss/functions";
 // theme color variables
 // scss-docs-start color-variables
 $blue:    #2b3e85 !default;
@@ -14,7 +15,7 @@ $cyan:    #7badb6 !default;
 // scss-docs-start theme-color-variables
 $primary:       $blue !default;
 // $secondary:     $gray-600 !default;
-$secondary:     #888178 !default;
+// $secondary:     #888178 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -28,5 +29,23 @@ $dark:          #555f60 !default;
 // use Myriad Pro font
 $font-family-sans-serif:      "myriad-pro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
+// import variables and mixins files (so we can use them below)
+// any redefined vars above will be incorporated into the files (e.g. in maps)
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// anythin that depends on variables/mixins file defined below
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+
+// Splash
+.splash {
+  background-size: cover;
+  min-height: 400px;
+  text-shadow: black 5px 5px 10px;
+}
+
+.splash-schofield {
+  background-image: url("/assets/20230830_Campus_Scene_38.png");
+}

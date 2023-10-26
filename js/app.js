@@ -56,9 +56,17 @@ class Course {
 		this.required = false;
 		this.enroll_term = null;
 	}
+	card_title() {
+		if (this.number > 0) {
+			return `${this.field} ${this.number}`;
+		} else {
+			return `${this.field} ${this.name}`;
+		}
+	}
+
 	card_html() {
 		let res = `<div class="col"><div class='card' id='${this.card_id}'>\n`;
-		res += `  <h5 class='card-header text-bg-light'>${this.field} ${this.number} <span class='fst-italic'>(${this.credits} credits)</span></h5>\n`;
+		res += `  <h5 class='card-header text-bg-light'>${this.card_title()} <span class='fst-italic'>(${this.credits} credits)</span></h5>\n`;
 		res += "  <div class='card-body'>\n";
 		res += `    <h5 class='card-title'>${this.name}</h5>\n`;
 		res += "    <div class='row'>\n";
@@ -82,10 +90,10 @@ class Course {
 		res += "    <span class='fw-bold status'></span>\n";
 		res += "    <span class='le'>\n";
 		this.le.forEach(elt => {
-			if (['K1', 'K2', 'K3', 'K4', 'K1L', 'K2L'].includes(elt)) {
-				res += `      <span class="badge text-bg-secondary">${elt}</span>\n`;
-			} else if (['S1', 'S1W', 'S2', 'S3'].includes(elt)) {
-				res += `      <span class="badge text-bg-light">${elt}</span>\n`;
+			if (['K1', 'K2', 'K3', 'K4', 'K1L', 'K2L', 'S1', 'S1W', 'S2', 'S3', 'R1', 'R2', 'R3', 'I1'].includes(elt)) {
+				res += `      <span class="badge text-bg-dark">${elt}</span>\n`;
+			} else if (['SL15', 'SL30'].includes(elt)) {
+				res += `      <span class="badge text-bg-info">${elt}</span>\n`;
 			}
 		});
 		res += '    </span>\n';
@@ -222,10 +230,14 @@ async function getCourses() {
 
 // Now do the work. Once the courses are loaded, go nuts!
 getCourses().then(() => {
-	precalc = courses['MATH 112'];
-	calc = courses['MATH 114'];
-	document.querySelector('#test-grid').innerHTML += precalc.card_html();
-	document.querySelector('#test-grid').innerHTML += calc.card_html();
+	// precalc = courses['MATH 112'];
+	// calc = courses['MATH 114'];
+	// document.querySelector('#test-grid').innerHTML += precalc.card_html();
+	// document.querySelector('#test-grid').innerHTML += calc.card_html();
+
+	Object.entries(courses).forEach(([key, course]) => {
+		document.querySelector('#test-grid').innerHTML += course.card_html();
+	});
 
 	// activate modal description listeners
 	const buttons = document.querySelectorAll('button.description');
