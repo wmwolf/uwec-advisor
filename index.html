@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>UWEC Advising Wizard</title>
+    <!-- Get Myriad Pro fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/czp7hko.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">UWEC Advising Wizard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="https://catalog.uwec.edu/undergraduate/overview/" target="_blank">Course Catalogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://camps.uwec.edu/" target="_blank">CampS</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://uwec.navigate.eab.com/" class="nav-link" target="_blank">Navigate</a>
+          </li>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1 class="text-primary">Bootstrap 5.3 boilerplate</h1>
+    <div class="row row-cols-1 row-cols-md-2 g-4" id="test-grid">
+    </div>
+<!-- Modal -->
+    <div class="modal fade no-print" id="course-info" tabindex="-1" aria-labelledby="course-info-label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-primary" id="course-info-label">Course Title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            </button>
+          </div>
+          <div class="modal-body" id=course-description>
+          </div>
+    
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary" id='modal-enrolling'>Enrolling</button>
+            <button type="button" class="btn btn-success" id='modal-completed'>Completed</button> -->
+          </div>
+        </div>
+      </div>
+    </div>      
+  </div>
+  <!-- bootstrap 5.3 boilerplate -->
+  <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

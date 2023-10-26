@@ -1,0 +1,22 @@
+{
+  "name": "uwec-advisor",
+  "version": "1.0.0",
+  "description": "Web interface for semester-by-semester major course advising.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmwolf/uwec-advisor.git"
+  },
+  "author": "Bill Wolf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wmwolf/uwec-advisor/issues"
+  },
+  "homepage": "https://github.com/wmwolf/uwec-advisor#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.1"
+  }
+}

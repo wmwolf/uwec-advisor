@@ -1,0 +1,32 @@
+// theme color variables
+// scss-docs-start color-variables
+$blue:    #2b3e85 !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #b4373c !default;
+$orange:  #e37a33 !default;
+$yellow:  #edac1a !default;
+$green:   #b5a742 !default;
+$teal:    #20c997 !default;
+$cyan:    #7badb6 !default;
+
+// scss-docs-start theme-color-variables
+$primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+$secondary:     #888178 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-900 !default;
+$light:         #ecede9 !default;
+$dark:          #555f60 !default;
+// scss-docs-end theme-color-variables
+
+// use Myriad Pro font
+$font-family-sans-serif:      "myriad-pro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+

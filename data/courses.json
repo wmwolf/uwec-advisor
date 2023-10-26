@@ -1,0 +1,31 @@
+{
+  "MATH 112": {
+    "field": "MATH",
+    "number": 112,
+    "name": "Precalculus Mathematics",
+    "lecture_hours": 4,
+    "lab_hours": 0,
+    "credits": 4,
+    "description": "Prepares students to enter the Math 114, Math 215, Math 216 sequence. Includes absolute value; logarithmic, exponential, and trigonometric functions; inequalities; conic sections; complex numbers; and topics from theory of equations.",
+    "le": ["S2"],
+    "requirements": null,
+    "years_offered": "all",
+    "terms_offered": "all"
+  },
+  "MATH 114": {
+    "field": "MATH",
+    "number": 114,
+    "name": "Calculus I",
+    "lecture_hours": 4,
+    "lab_hours": 0,
+    "credits": 4,
+    "description": "Limits, theory, and application of the derivative; introduction to integration.",
+    "le": ["S2"],
+    "requirements": {
+      "prereqs": ["MATH 112"]
+    },
+    "years_offered": "all",
+    "terms_offered": "all"
+  }
+}
+  
